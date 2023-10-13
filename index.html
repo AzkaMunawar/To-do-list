@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="todo-list.css">
+</head>
+
+<body>
+    <div class="first-container-form">
+        <h1>TO DOs List</h1>
+        <!-- since I donot need to submit the form so I am just craeting input, label and textarea fields -->
+        <label for="title">Title</label>
+        <input type="text" id="title" value="" maxlength="100"> <!-- There value would be waht user write in it -->
+        <!--But we must specify value="" , so we can get value when user enters-->
+        <small>*Title is mandatory field</small>
+        <label for="description">Description</label>
+        <textarea rows="5" id="description" value="" ></textarea>
+        <div class="wrapper">
+            <button id="add-to-list">Add to List</button>
+            <button id="clearList" onclick="clearLocalStorage()">Clear List </button>
+
+        </div>
+        <small id="showNotice"></small>
+        <!-- Table -->
+        <h2>Your List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Item Title</th>
+                    <th>Item Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+
+
+
+            <tbody id="table-body">
+                <tr>
+                    <th scope="row"></th>
+                    <td ><div></div></td>
+                    <td ><div></div></td>
+                    <td ><button >Delete</button></td>
+                </tr>
+
+            </tbody>
+
+            <tr>
+                <td id="table-notice" colspan="4"></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <script src="todoList.js"></script>
+</body>
+
+</html>
+
+
